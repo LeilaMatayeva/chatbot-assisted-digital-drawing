@@ -1,0 +1,31 @@
+{
+  "intents": [
+     {
+      "tag": "finished",
+      "patterns": [
+        "finished",
+        "finish",
+        "Finished",
+        "done",
+        "Done",
+        "finishing",
+        "ended"
+
+      ],
+      "responses": [
+        "Thank you, you did a fantastic art :)"
+      ]
+    },{
+      "tag": "hello",
+      "patterns": [
+        "hi",
+        "hello"
+
+      ],
+      "responses": [
+        "Hey:) How can I help you?"
+      ]
+    }
+
+  ]
+}
