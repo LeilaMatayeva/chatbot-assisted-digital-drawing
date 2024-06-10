@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom Scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+  color: #fff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#canvas {
+  position: absolute;
+  left: 10px;
+  border: 3px solid #c6a2f1;
+  border-bottom: none;
+  background-color: #fff;
+  z-index: 0;
+
+}
+
+.toolbox {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  box-sizing: border-box;
+  background-color: rebeccapurple;
+  border: 2px solid;
+  border-color: #acabab;
+  /* border-top: none; */
+  display: flex;
+  width: 63rem;
+  height: 3.6rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  color: skyblue;
+}
+
+.toolbox > * {
+  background-color: blueviolet;
+  border: none;
+  border-radius: 500px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  height: 2rem;
+  width: 2.75rem;
+  margin: 0.65rem;
+  cursor: pointer;
+  color: white;
+}
+
+/*.toolbox > *:last-child {
+  margin-left: auto;
+}*/
+.size {
+  cursor: unset;
+}
+
+.color-changer {
+  width: auto;
+  font-size: 0.8rem;
+  padding-left: 0.35rem;
+  padding-right: 0.25rem;
+  border-radius: 500px;
+}
+.color-picker {
+  background: none;
+  height: 1.75rem;
+  width: 1.75rem;
+  border: none;
+  cursor: crosshair;
+}
+.color-picker::-webkit-color-swatch {
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+}
+.color-picker::-moz-color-swatch {
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+}
+
+.eraser {
+  border-radius: 2rem;
+  font-size: 2rem;
+}
+
+.clear {
+  border-radius: 2rem;
+  font-size: 1rem;
+}
+
+.magicBrush{
+  border-radius: 2rem;
+  font-size: 2rem;
+}
+
+.stopBtn {
+  float: right; !important;
+  padding-left: 10px;!important;
+
+
+}

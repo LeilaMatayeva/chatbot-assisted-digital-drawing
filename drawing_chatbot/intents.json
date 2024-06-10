@@ -1,0 +1,111 @@
+{
+  "intents": [
+
+    {
+      "tag": "undo",
+      "patterns": [
+        "undo",
+        "back",
+        "Undo",
+        "cancel",
+        "go back"
+
+      ],
+      "responses": [
+        "I will cancel my last drawing",
+        "I will undo my last added drawing",
+        "Seems like you didn't like my added drawing",
+        "I will not keep my last added drawing"
+      ]
+    }, {
+      "tag": "stop_model",
+      "patterns": [
+        "Stop",
+        "stop model",
+        "stop",
+        "please stop"
+      ],
+      "responses": [
+        "Alright, I got it. You just hate me",
+        "I am so terrible, I am going to cry",
+        "You are so cruel...",
+        "I will stop drawing:(",
+        "Okay...I will stop",
+        "I am such a bad artist. I will stop."
+      ]
+    },{
+      "tag": "start_model",
+      "patterns": [
+        "start",
+        "Start",
+        "please start"
+      ],
+      "responses": [
+        "I will be drawing with you now:)",
+        "I will start drawing with you, yay!",
+        "Alright, let me show you my skills!",
+         "Let's dive into the drawing pool together! :)",
+    "Pencils ready? Let's create some magic side by side!",
+    "Drawing time! I'm jumping in with you!",
+    "Sketching party, and I'm your plus one! :D",
+    "Drawing buddies, unite! I'm with you!",
+    "Let's embark on a doodling adventure together! :)",
+    "Grabbing my art gear to join you. Let's roll!",
+    "Together, we're an unstoppable drawing duo! Yay!",
+    "Let's sprinkle some creativity on the canvas together!",
+    "Art time! I'm swooping in to draw with you!",
+    "I'm all in for a drawing session together! Let's go!",
+    "Drawing side by side, what could be better? :)",
+    "Let's paint our imaginations on the canvas together!",
+    "I'm ready to dive into the drawing world with you!",
+    "Let's blend our creativity on this artistic journey together!",
+    "I'm gearing up for a drawing adventure with you! Yay!"
+      ]
+    }, {
+      "tag": "next_object",
+      "patterns": [
+        "next",
+        "next",
+        "next sketch",
+        "Next",
+        "Next please"
+      ],
+      "responses": [
+        "I will be drawing with you now:)",
+        "I will start drawing with you, yay!",
+        "Alright, let me show you my skills!",
+         "Let's dive into the drawing pool together! :)",
+    "Pencils ready? Let's create some magic side by side!",
+    "Drawing time! I'm jumping in with you!",
+    "Sketching party, and I'm your plus one! :D",
+    "Drawing buddies, unite! I'm with you!",
+    "Let's embark on a doodling adventure together! :)",
+    "Grabbing my art gear to join you. Let's roll!",
+    "Together, we're an unstoppable drawing duo! Yay!",
+    "Let's sprinkle some creativity on the canvas together!",
+    "Art time! I'm swooping in to draw with you!",
+    "I'm all in for a drawing session together! Let's go!",
+    "Drawing side by side, what could be better? :)",
+    "Let's paint our imaginations on the canvas together!",
+    "I'm ready to dive into the drawing world with you!",
+    "Let's blend our creativity on this artistic journey together!",
+    "I'm gearing up for a drawing adventure with you! Yay!"
+      ]
+    }, {
+      "tag": "finished",
+      "patterns": [
+        "finished",
+        "finish",
+        "finished",
+        "finished",
+        "Finished",
+        "done",
+        "Done"
+
+      ],
+      "responses": [
+        "Thank you, you did a fantastic art :)"
+      ]
+    }
+  ]
+}

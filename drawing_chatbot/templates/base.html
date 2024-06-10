@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.8.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@0.12.0/dist/ml5.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+</head>
+<body>
+{#<canvas width=1000%" height="780%" id="canvas">#}
+</canvas>
+<div class="toolbox">
+        <button title="Decrease Size" class="decrease"> -</button>
+        <span title="Size" class="size">6</span>
+        <button  title="Increase Size" class="increase">+</button>
+        <div  class="color-changer">
+            <label for="color-picker">🖌️</label>
+            <input title="Brush Color" type="color" class="color-picker color">
+        </div>
+        <div class="color-changer">
+            <!--<label for="canvas-color">🎨</label>-->
+            <input title="Canvas color" type="color" value="#ffffff" class="color-picker canvas-color">
+        </div>
+         <button  title="MagicBrush" class="magicBrush">🪄</button>
+         <button  title="Eraser" class="eraser">🧽</button>
+        <button title="Clear Canvas" class="clear">Clear All</button>
+
+
+    </div>
+
+<div class="container">
+    <div class="chatbox" >
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Your Art Teacher</h4>
+                    <p class="chatbox__description--header"></p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+{#                <div class="image_exercise">#}
+{#                    <img src="{{ url_for('static', filename='images/flower1.svg') }}" style="width: 350px; height: 350px" />#}
+{#                </div>#}
+            <div class="typing-message bounceM">
+            </div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+
+    </div>
+</div>
+
+
+<script>
+    // When the page loads, record the start time
+    var startTime = new Date();
+
+    function stopTimer() {
+        var endTime = new Date();
+        var timeSpent = (endTime - startTime) / 1000; // Time in seconds
+
+        // Send the timeSpent back to the server
+        fetch("/submit_time", {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ timeSpent: timeSpent })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Time submitted successfully:", data);
+        })
+        .catch((error) => {
+            console.error("Error:", error);
+        });
+    }
+</script>
+
+<script type="text/javascript">
+    var userId = "{{ session['user_id'] }}";  // Pass user ID from Flask session to JavaScript
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+
+
+
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script src="../static/rdp.js"></script>
+    <script src="../static/sketch.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='sketch.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+
+</body>
+</html>
